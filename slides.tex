@@ -1,0 +1,142 @@
+\documentclass[12pt,aspectratio=169,english,finnish,pdflatex%,handout
+]{beamer}
+\definecolor{MyGreen}{RGB}{50, 120, 50}
+\usecolortheme[named=MyGreen]{structure}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb} 
+\usepackage{animate}
+\usepackage{multimedia}
+
+\usepackage{natbib}
+\bibpunct[: ]{(}{)}{,}{}{}{;}
+
+\usepackage{tikz}
+
+\usepackage{tipa}
+
+\usepackage{hyperref}
+
+\setbeamertemplate{navigation symbols}{}
+
+\graphicspath{{figures/}}
+
+\setlength{\leftmargini}{0pt}
+\setlength{\leftmarginii}{1em}
+
+%% Write out the names of graphics files being included 
+\newwrite\graphics
+\immediate\openout\graphics=\jobname.graphics%
+\let\oincludegraphics\includegraphics% store original \includegraphics
+\renewcommand{\includegraphics}[2][]{% prepend to it (could also use xpatch, etc.)
+  \immediate\write\graphics{#2}
+  \oincludegraphics[#1]{#2}}
+
+\newcommand{\kommentti}[1]{
+  {\bf[#1]}
+}
+
+
+\title{My three priorities for impact in\\
+SLT/SLP research and teaching
+}
+\author{Pertti Palo} 
+\date{5 May 2026} 
+
+
+\begin{document}
+
+\frame{\titlepage
+  \centering
+} 
+
+\frame{\frametitle{My three priorities}
+  \kommentti{how do these fit with the teaching philosphy and research impact?}
+  \begin{itemize}
+  \item Foundational knowledge (teaching)
+  \item Articulation (teaching and research)
+  \item Life long learning (teaching and research)
+  \item Social skills: \kommentti{this is most me}
+  \end{itemize}
+}
+
+
+\frame{\frametitle{Foundational knowledge}
+  \begin{itemize}
+  \item Acoustic phonetics
+  \item Articulatory phonetics ()
+  \item Perceptual phonetics (what actually matters in perception)
+  \item Anatomy and physiology (from a functional point of view, how used in
+  speech, how used in other activities)
+  \item Neurolinguistics (Levelt, DIVA and other theories and models)
+  \end{itemize}
+
+  The idea is to build a solid foundation for the students so that they'll find
+  it easy to add new, more complex concepts, find connections between what they
+  have and are learning, and to pose questions to their own understanding and
+  to their instructors and materials.
+
+}
+
+
+\frame{\frametitle{Articulation}
+  \begin{itemize}
+  \item In both teaching and research I want to work with not just acoustics.
+  \item In my own research articulation informs how segments work, when speech starts, how segmentation should be done.
+  \item In my teaching articulation brings in deeper understanding of the speech production processes.
+  \item It is literally the connector between neural processes and acoustics.
+  \item Ultrasound is my go-to method in looking at articulation.
+  \item Ultrasound is relatively cheap, very portable, and intuitive for users
+  who are knowledgeable in articulation and anatomy. 
+  \item Ultrasound is useful in studying pathologies such as stuttering and
+  Parkinsons disease, and it is an effective way of providing biofeedback. 
+  \item \kommentti{make it concrete: video}
+  \end{itemize}
+}
+
+
+\frame{\frametitle{Life long learning}
+  \begin{itemize}
+  \item Students should not come to university to do a degree and be done with
+  learning. In fact, their attitude from the beginning should be that they are
+  learning to learn, so that they can keep on doing so for the rest of their
+  lives.
+  \item From the get go I want to teach students how to find and evaluate
+  knowledge themselves. 
+  \item Seminar presentations and thesis work bring depth to learning and
+  enhance information finding and critiquing skills.
+  \item My goal is that after graduation the new SLTs will be motivated to
+  continue to read scientific articles and to both update their knowledge and
+  keep an active relationship with researchers. This will not be a one way
+  street of researchers only providing information and ideas, but rather an
+  on-going discussion and sharing of information of ideas between colleagues
+  some of whom do research and some clinical work.
+  \end{itemize}
+}
+
+
+\frame{\frametitle{References}
+  
+\bibliographystyle{apalike}
+\bibliography{science_combined}
+
+}
+
+\end{document}
+
+
+\frame{
+  \centering
+  {
+    \bf \Large 
+    \usebeamercolor[fg]{title}
+    Something else i.e. section title
+    
+    \vfill
+%    \includegraphics[height=1.5cm]{figures/aalto_logo} 
+  }
+}
+
+
