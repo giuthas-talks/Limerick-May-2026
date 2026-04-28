@@ -41,17 +41,44 @@
 }
 
 
+% \setbeamertemplate{title page}{
+%   \vbox{}
+%   \vfill
+%   \begingroup
+%     \centering
+%     \usebeamertemplate{title}
+%     \vskip0.5em
+%     \usebeamertemplate{author}
+%     \usebeamertemplate{date}
+%     \vskip1em
+%     \usebeamertemplate{titlegraphic}
+%   \endgroup
+%   \vfill
+% }
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \centering
+  \usebeamerfont{title}{\usebeamercolor[fg]{subtitle}\inserttitle}\par
+  \bigskip
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{black}\insertauthor\par
+  \usebeamerfont{subtitle}\insertdate\par
+  \bigskip
+  % \inserttitlegraphic
+}
+
 \title{My three priorities for impact in\\
 SLT/SLP research and teaching
 }
-\author{Pertti Palo} 
+\author{Pertti Palo, PhD, Lic. Tech., MSc} 
 \date{5 May 2026} 
-
 
 \begin{document}
 
 \frame{\titlepage
   \centering
+  \includegraphics[height=3cm]{ultra-eva.jpg}
+  % \includegraphics[height=3cm]{ema_kauan_sitten_cropped.JPG}
+  \includegraphics[height=3cm]{Pertti_sedan_letkuradio.jpg}
 } 
 
 \frame{\frametitle{Land acknowledgement}
@@ -71,15 +98,18 @@ I live in amiskwacîwâskahikan / Edmonton.
 }
 
 
+
 \frame{\frametitle{My three priorities}
+\centering
+\includegraphics[height=.6\textheight]{infographic.png}
+
+\note{  
 \begin{enumerate}
   \item {\bf Economic Impact:} I train resilient and future-proofed workers.
   \item {\bf Health Impact:} I develop, teach, and advocate for accessible clinical tools.
   \item {\bf Societal Impact:} I work to ensure health systems and research
   serve the entire population.
 \end{enumerate}
-
-\note{  
   \kommentti{how do these fit with the teaching philosphy and research impact?}
   \begin{itemize}
   \item Knowledge and skills throughout studies and life (teaching and research)
@@ -91,24 +121,30 @@ I live in amiskwacîwâskahikan / Edmonton.
 
 
 \frame{\frametitle{Priority 1: Training resilient and future-proofed workers}
-\begin{itemize}
-  \item I focus on foundational skills such as finding, critiquing, and curating
-  information.
-  \item I teach students how to learn with intention in general and especially
-  how to efficiently learn and integrate new methods into their professional
-  practice.
-  \item I do not just tell of new tools, but I build the spaces and open source
-  software
-  \citep{Palo-CASTComputerAssisted-2024,PaloEtAl-PATKITPhoneticAnalysis-2026,PaloLaporte-SLURPYPythonVersion-2026}
-  for students to learn in practice and think critically about tongue
-  ultrasound \citep{Palo-MeasuringPrespeechArticulation-2019}, air flow
-  \citep{PaloCowen-SimultaneousRecordingTongue-2017}, electroglottography
-  \citep{WaaramaaEtAl-EmotionsFreelyVarying-2014}, etc.
-  \item I want to provide joint courses with other programs to teach students
-  practical collaboration with other professionals such as physicians,
-  occupational therapists, physical therapists, and even engineers (University
-  of Helsinki 2011-2012).
-\end{itemize}
+\begin{columns}
+  \begin{column}{.8\textwidth}
+    \begin{itemize}
+      \item {\bf Foundational skills:} Finding, critiquing, and curating
+      information in the age of AI.
+      \item {\bf Intentional learning:} Integrating new methods into their
+      professional practice.
+      \item {\bf Learning environments:} I build the spaces and open source
+      software
+      \citep{Palo-CASTComputerAssisted-2024,PaloEtAl-PATKITPhoneticAnalysis-2026,PaloLaporte-SLURPYPythonVersion-2026}
+      for students to learn in practice and think critically about tongue
+      ultrasound \citep{Palo-MeasuringPrespeechArticulation-2019}, air flow
+      \citep{PaloCowen-SimultaneousRecordingTongue-2017}, electroglottography
+      \citep{WaaramaaEtAl-EmotionsFreelyVarying-2014}, etc.
+      \item {\bf Cross-disciplinary teaching:} I provide joint courses with other
+      programs (University of Helsinki 2011-2012) to teach students collaboration with 
+      physicians, occupational therapists, physical therapists, engineers, etc.
+    \end{itemize}    
+  \end{column}
+  \begin{column}{.18\textwidth}
+    \includegraphics[width=\columnwidth]{ultra-eva.jpg}
+    \includegraphics[width=\columnwidth]{slurp.png}
+  \end{column}
+\end{columns}
 
 \note{  
   \kommentti{Employ some dry humour here. You might note that while instilling a
@@ -128,21 +164,32 @@ I live in amiskwacîwâskahikan / Edmonton.
 
 
 \frame{\frametitle{Priority 2: Accessible clinical tools}
-  \begin{itemize}
-  % \item In both teaching and research I want to work with not just acoustics.
-  % \item In my own research articulation informs how segments work, when speech starts, how segmentation should be done.
-  % \item In my teaching articulation brings in deeper understanding of the speech production processes.
-  \item Articulation provides a deeper understanding of speech production: It
-  links neural processes and the produced speech.
-  \item Ultrasound is my go-to method for articulation because it is relatively
-  cheap, very portable, and intuitive for users who are knowledgeable in
-  articulation and anatomy. 
-  \item It is useful in studying pathologies such as stuttering, Parkinsons
-  disease, or covert errors \citep{LloydEtAl-ImpactRealtimeArticulatory-2019},
-  and it is an effective way of providing biofeedback. 
-  \item Example of speech analysis with PATKIT \citep{PaloEtAl-PATKITPhoneticAnalysis-2026}.
-  \item Ultrasound video of silent speech articulation.
-  \end{itemize}
+\begin{columns}
+  \begin{column}{.8\textwidth}
+    \begin{itemize}
+    \item {\bf Articulatory methods:} Needed to understand speech production by
+    linking neural processes and the produced acoustic speech.
+    \item {\bf Ultrasound:} Relatively cheap, very portable, and intuitive for
+    users who are knowledgeable in articulation and anatomy. 
+      \begin{itemize}
+      \item {\bf Speech pathologies:} I use ultrasound in studying stuttering,
+      Parkinsons disease, and covert errors
+      \citep{LloydEtAl-ImpactRealtimeArticulatory-2019}.
+      \item {\bf Biofeedback:} Patients and clients quickly orient to their own
+      articulation. 
+    \end{itemize}
+    \item {\bf Tool demonstrations:} 
+      \begin{itemize}
+      \item Ultrasound video of silent speech articulation in stuttering.
+      \item Speech analysis with PATKIT \citep{PaloEtAl-PATKITPhoneticAnalysis-2026}.
+      \end{itemize}
+    \end{itemize}
+  \end{column}
+  \begin{column}{.18\textwidth}
+    \includegraphics[width=\columnwidth]{ultra-eva.jpg}
+    \includegraphics[width=\columnwidth]{slurp.png}
+  \end{column}
+\end{columns}
 
 \note{  
   \kommentti{Make the clinical translation the star of the slide. In impact
@@ -161,13 +208,14 @@ I live in amiskwacîwâskahikan / Edmonton.
 }
 
 
-\frame{\frametitle{PLACE HOLDER SLIDE: PATKIT example}
-  \centering
-  \includegraphics[width=.8\textwidth]{PATKIT-zoomed-example.png}
+\frame{\frametitle{Ultrasound stuttering example}
+
+  \kommentti{Link to youtube video}
 }
 
-\frame{\frametitle{PLACE HOLDER SLIDE: ultrasound video example}
-
+\frame{\frametitle{PATKIT example}
+  \centering
+  \includegraphics[width=.8\textwidth]{PATKIT-zoomed-example.png}
 \note{   
   The Transition: "I am an experimental phonetician, which means I could very
   happily spend the remainder of the day just discussing PATKIT and the
@@ -181,19 +229,27 @@ I live in amiskwacîwâskahikan / Edmonton.
 
 
 \frame{\frametitle{Priority 3: Serving the entire population}
-  \begin{itemize}
-  \item To connect academia with the general public I regularly contribute to a
-  role-playing convention in Finland on the topics of speech articulation and
-  responsible use of existing languages in fictional settings (Ropecons 2022-2025). 
-  \item For last two years I have been building relationships with Indigenous
-  communities in and around Edmonton.
-  \item Decolonisation and social justice work are necessary in ensuring our
-  health systems and research are representative of all of humanity and not
-  just some fraction of it \citep{LonnqvistEtAl-HowYoungAdults-2017}. 
-  \item In Ireland I can see that my skills in community connection building
-  can be useful in working with for example the The Gaeltacht, the Traveller
-  community and migrant populations. 
-  \end{itemize}
+\begin{columns}
+  \begin{column}{.8\textwidth}
+    \begin{itemize}
+    \item {\bf  Health systems and research for all:} Decolonisation and social
+    justice are tools for ensuring our work is for all of humanity and not just a
+    fraction. % \citep{LonnqvistEtAl-HowYoungAdults-2017}. 
+    \item {\bf Outreach experience:} I regularly contribute to a role-playing
+    convention in Finland on, e.g., responsible
+    use of existing languages in fictional settings (Ropecons 2022-2025). 
+    \item {\bf Connection skills:} For last two years I have been building
+    relationships with Indigenous communities in and around Edmonton.
+    \item {\bf Community connection building:} My skills will be useful in
+    working with the The Gaeltacht, the Traveller community and migrant
+    populations. 
+    \end{itemize}
+  \end{column}
+  \begin{column}{.18\textwidth}
+    \includegraphics[width=\columnwidth]{ropecon_cropped.jpg}
+    \includegraphics[width=\columnwidth]{SaddleLakeCreeNation.png}
+  \end{column}
+\end{columns}
 
   \note{
     
@@ -211,31 +267,37 @@ I live in amiskwacîwâskahikan / Edmonton.
 }
 
 
-\frame{\frametitle{Concrete action on the priorities}
+\frame{\frametitle{First concrete steps on my impact priorities}
 
-\begin{enumerate}
-  \item With university and grant funding, I want to setup a world class
-  teaching laboratory at University of Limerick. With my experience of
-  designing and building such facilities (University of Helsinki 2020,
-  University of Alberta 2024-2026), I can design it to fit in limited space or
-  even make it possible to set the lab up for a class and quickly pack it away
-  after.
-  \item I am planning an international project to study articulatory stability
-  in Parkinsons with ultrasound. Given Canada's recent joining of EU research
-  programs, this will be a major EU grant with collaborators from Canada and
-  Finland on this topic with methods I have developed over the past decade
-  \citep{Palo-MeasuringPrespeechArticulation-2019,PaloEtAl-MagnitudeUltrasoundProbe-2025,
-  PaloEtAl-PATKITPhoneticAnalysis-2026}.  
-  \item To bring speech research and therapy to the whole population, I plan to
-  take the idea of the mobile lab/clinic in a van idea from the Netherlands
-  \citep{RebernikEtAl-SPRAAKLABMobileLaboratory-2025} and build a version
-  adapted to the Irish conditions and needs as a major grant funded project.
-\end{enumerate}
+\begin{columns}
+  \begin{column}{.24\textwidth}
+    \includegraphics[width=\columnwidth]{infographic.png}
+  \end{column}
+  \begin{column}{.75\textwidth}
+    \begin{enumerate}
+      \item {\bf Economic:} I will set up a world class teaching
+      laboratory at University of Limerick. With my experience (University of
+      Helsinki 2020, University of Alberta 2024-2026), I can fit the lab in
+      limited or temporary spaces.
+      \item {\bf Health:} I am preparing an international project to study
+      articulatory stability in Parkinsons with ultrasound. This will be a major EU
+      grant with collaborators from Canada and Finland with methods I have
+      developed over the past decade
+      \citep{Palo-MeasuringPrespeechArticulation-2019,PaloEtAl-MagnitudeUltrasoundProbe-2025,
+      PaloEtAl-PATKITPhoneticAnalysis-2026}.  
+      \item {\bf Societal:} Inspired by
+      \cite{Ladefoged-PhoneticDataAnalysis-2003} and
+      \cite{RebernikEtAl-SPRAAKLABMobileLaboratory-2025} I will bring speech
+      research and therapy to the whole population by building a mobile lab/clinic
+      in a van as a major grant funded project.
+    \end{enumerate}
+  \end{column}
+\end{columns}
 
   \note{
     
     \begin{itemize}
-      \item The mention of the Finnish role-playing convention is meant as a
+    \item The mention of the Finnish role-playing convention is meant as a
     slightly quirky detail to make me less two dimensional. I will deliver it
     entirely deadpan. Then, pivot strictly to the core message:
     "Representative research is not just a moral imperative; it is a
@@ -253,8 +315,9 @@ I live in amiskwacîwâskahikan / Edmonton.
   {
     \bf \Large 
     \usebeamercolor[fg]{title}
-    Thank you!
-    
+    Thank you!\\
+    \vfill
+    Go raibh maith agaibh!
     \vfill
 %    \includegraphics[height=1.5cm]{figures/aalto_logo} 
   }
