@@ -1,25 +1,60 @@
-\documentclass[12pt,aspectratio=169,english,finnish,pdflatex%,handout
+\documentclass[12pt,aspectratio=169,english,pdflatex%,handout
 ]{beamer}
 \definecolor{MyGreen}{RGB}{50, 120, 50}
 \usecolortheme[named=MyGreen]{structure}
 % \setbeameroption{show notes} 
-
-
-\usepackage{babel}
+% \usepackage[backend=biber,maxbibnames=99,defernumbers=true,sorting=ydnt,giveninits=true]{biblatex}
 \usepackage[utf8]{inputenc}
+\usepackage[maxbibnames=99,citestyle=authoryear,bibstyle=authoryear,sorting=nyt,natbib=true,backend=bibtex]{biblatex}
+\renewcommand\nameyeardelim{, }
+
+\usepackage[english]{babel}
+\usepackage{csquotes}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb} 
 \usepackage{animate}
 \usepackage{multimedia}
 
-\usepackage{natbib}
-\bibpunct[: ]{(}{)}{,}{}{}{;}
+% \usepackage{natbib}
+% \bibpunct[: ]{(}{)}{,}{}{}{;}
 
 \usepackage{tikz}
 
 \usepackage{tipa}
 
 \usepackage{hyperref}
+
+\setbeamertemplate{bibliography item}{}
+\renewcommand*{\bibfont}{\scriptsize}
+\addbibresource{science_combined.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -76,9 +111,10 @@ SLT/SLP research and teaching
 
 \frame{\titlepage
   \centering
-  \includegraphics[height=3cm]{ultra-eva.jpg}
-  % \includegraphics[height=3cm]{ema_kauan_sitten_cropped.JPG}
+  \includegraphics[height=3cm]{lab-photos/Augustana-mics.jpg}
+  \includegraphics[height=3cm]{lab-photos/rothenberg-in-use.png}
   \includegraphics[height=3cm]{Pertti_sedan_letkuradio.jpg}
+  \includegraphics[height=3cm]{lab-photos/Augustana-plastic.png}
 } 
 
 \frame{\frametitle{Land acknowledgement}
@@ -124,25 +160,27 @@ I live in amiskwacîwâskahikan / Edmonton.
 \begin{columns}
   \begin{column}{.8\textwidth}
     \begin{itemize}
-      \item {\bf Foundational skills:} Finding, critiquing, and curating
-      information in the age of AI.
-      \item {\bf Intentional learning:} Integrating new methods into their
+      \item {\bf Foundational skills:} Finding, critiquing, and {\em curating
+      information} in the age of AI.
+      \item {\bf Intentional learning:} Integrating {\em new methods} into their
       professional practice.
       \item {\bf Learning environments:} I build the spaces and open source
       software
       \citep{Palo-CASTComputerAssisted-2024,PaloEtAl-PATKITPhoneticAnalysis-2026,PaloLaporte-SLURPYPythonVersion-2026}
-      for students to learn in practice and think critically about tongue
+      for students to {\em learn in practice and think critically} about tongue
       ultrasound \citep{Palo-MeasuringPrespeechArticulation-2019}, air flow
       \citep{PaloCowen-SimultaneousRecordingTongue-2017}, electroglottography
       \citep{WaaramaaEtAl-EmotionsFreelyVarying-2014}, etc.
-      \item {\bf Cross-disciplinary teaching:} I provide joint courses with other
-      programs (University of Helsinki 2011-2012) to teach students collaboration with 
-      physicians, occupational therapists, physical therapists, engineers, etc.
+      \item {\bf Cross-disciplinary teaching:} I provide joint courses with
+      other programs (University of Helsinki 2011-2012) to facilitate {\em
+      learning collaboration} with physicians, occupational therapists,
+      physical therapists, engineers, etc.
     \end{itemize}    
   \end{column}
   \begin{column}{.18\textwidth}
-    \includegraphics[width=\columnwidth]{ultra-eva.jpg}
-    \includegraphics[width=\columnwidth]{slurp.png}
+    \includegraphics[width=\columnwidth]{3D_a_e.jpg}
+    \includegraphics[width=\columnwidth]{lab-photos/Augustana-consonants.png}
+    \includegraphics[width=\columnwidth]{lab-photos/Augustana-praat.png}
   \end{column}
 \end{columns}
 
@@ -178,10 +216,10 @@ I live in amiskwacîwâskahikan / Edmonton.
       \item {\bf Biofeedback:} Patients and clients quickly orient to their own
       articulation. 
     \end{itemize}
-    \item {\bf Tool demonstrations:} 
+    \item {\bf Demonstration - two ways to look at stuttering:} 
       \begin{itemize}
       \item Ultrasound video of silent speech articulation in stuttering.
-      \item Speech analysis with PATKIT \citep{PaloEtAl-PATKITPhoneticAnalysis-2026}.
+      \item PATKIT \citep{PaloEtAl-PATKITPhoneticAnalysis-2026} analysis of the same recording.
       \end{itemize}
     \end{itemize}
   \end{column}
@@ -210,12 +248,12 @@ I live in amiskwacîwâskahikan / Edmonton.
 
 \frame{\frametitle{Ultrasound stuttering example}
 
-  \kommentti{Link to youtube video}
+  Video available on YouTube: \url{https://youtu.be/f76Ieuss040}
 }
 
 \frame{\frametitle{PATKIT example}
   \centering
-  \includegraphics[width=.8\textwidth]{PATKIT-zoomed-example.png}
+  \includegraphics[width=.8\textwidth]{patkit-stuttering.png}
 \note{   
   The Transition: "I am an experimental phonetician, which means I could very
   happily spend the remainder of the day just discussing PATKIT and the
@@ -327,8 +365,12 @@ I live in amiskwacîwâskahikan / Edmonton.
 \frame{\frametitle{References}
 
 \tiny
-\bibliographystyle{apalike}
-\bibliography{science_combined}
+\boldname{Palo}{P.}{}
+\printbibliography
+
+% \bibliographystyle{apalike}
+% \bibliography{science_combined}
+
 
 }
 

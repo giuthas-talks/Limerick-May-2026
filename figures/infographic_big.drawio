@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram name="Page-1" id="2AduaTEItwTynRYagyO-">
-    <mxGraphModel dx="696" dy="528" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1009" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry height="170" width="180" x="340" y="210" as="geometry" />
         </mxCell>
         <mxCell id="RVg3XxQKje8iR5K0eR1x-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#8A5E00;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;" value="1. Economic:&lt;div&gt;Resilient workers&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="270" y="230" as="geometry" />
+          <mxGeometry height="40" width="130" x="262" y="230" as="geometry" />
         </mxCell>
         <mxCell id="RVg3XxQKje8iR5K0eR1x-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontColor=#8A5E00;strokeWidth=3;" value="2. Health:&lt;div&gt;Accessible tools&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="120" x="470" y="230" as="geometry" />
